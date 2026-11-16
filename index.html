@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneThing – Daily Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="app">
+
+        <aside class="sidebar">
+            <h2 class="logo">OneThing<span>.</span></h2>
+
+            <nav>
+                <a class="active" href="#today">☀ Today</a>
+                <a href="#upcoming">◷ Upcoming</a>
+                <a href="#completed">✓ Completed</a>
+            </nav>
+
+            <div class="sidebar-note">
+                <p>Remember 💜</p>
+                <small>One thing at a time. You are doing great!</small>
+            </div>
+        </aside>
+
+        <main class="main-content" id="today">
+
+            <header class="header">
+                <div>
+                    <p class="date" id="today-date"></p>
+                    <h1>Good morning! ☀️</h1>
+                    <p class="subtitle">Let's take it one step at a time.</p>
+                </div>
+            </header>
+
+            <section class="progress-card">
+                <div class="progress-heading">
+                    <h3>Your daily progress</h3>
+                    <span id="progress-text">0/0</span>
+                </div>
+                <div class="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+                <p>Every little step counts!</p>
+            </section>
+
+            <section class="tasks-section">
+                <div class="section-heading">
+                    <h2>Today's tasks</h2>
+                    <span id="task-count">0 tasks</span>
+                </div>
+
+                <form id="task-form">
+                    <input
+                        type="text"
+                        id="task-input"
+                        placeholder="What do you need to do?"
+                        required
+                    >
+                    <select id="task-time">
+                        <option value="Morning">Morning</option>
+                        <option value="Afternoon">Afternoon</option>
+                        <option value="Evening">Evening</option>
+                    </select>
+                    <button type="submit">+ Add task</button>
+                </form>
+
+                <div id="task-list"></div>
+            </section>
+
+            <section class="reminder-card">
+                <h3>A little reminder 💜</h3>
+                <p>You don't have to do everything today. Just start with one thing.</p>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>

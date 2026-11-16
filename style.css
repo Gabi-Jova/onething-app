@@ -1,0 +1,240 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #F8F7FC;
+    color: #343044;
+}
+
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background: #FFFFFF;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 26px;
+    margin-bottom: 55px;
+}
+
+.logo span {
+    color: #A997D5;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #77718A;
+    padding: 14px;
+    border-radius: 12px;
+}
+
+nav a.active {
+    background: #EAE4F5;
+    color: #66558B;
+}
+
+.sidebar-note {
+    margin-top: auto;
+    padding: 18px;
+    background: #F0EBF8;
+    border-radius: 15px;
+    line-height: 1.6;
+}
+
+.main-content {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 55px;
+}
+
+.date {
+    color: #888197;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.header h1 {
+    font-size: 32px;
+}
+
+.subtitle {
+    color: #888197;
+    margin-top: 10px;
+}
+
+.progress-card,
+.reminder-card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    margin-top: 35px;
+}
+
+.progress-heading,
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-heading span {
+    color: #8064C8;
+    font-weight: bold;
+}
+
+.progress-bar {
+    height: 10px;
+    background: #EEEAF5;
+    border-radius: 20px;
+    margin: 18px 0 12px;
+    overflow: hidden;
+}
+
+#progress-fill {
+    height: 100%;
+    width: 0%;
+    background: #A997D5;
+    transition: width 0.3s;
+}
+
+.progress-card p,
+.reminder-card p {
+    color: #888197;
+    font-size: 14px;
+}
+
+.tasks-section {
+    margin-top: 40px;
+}
+
+#task-form {
+    display: flex;
+    gap: 10px;
+    margin: 22px 0;
+}
+
+#task-form input,
+#task-form select {
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #E5E0ED;
+    border-radius: 10px;
+    background: white;
+}
+
+#task-form input {
+    flex: 1;
+}
+
+button {
+    border: none;
+    background: #A997D5;
+    color: white;
+    padding: 13px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.task-group {
+    margin-top: 25px;
+}
+
+.task-group h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    padding: 17px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.task-item input {
+    width: 18px;
+    height: 18px;
+    accent-color: #A997D5;
+}
+
+.task-name {
+    flex: 1;
+}
+
+.task-item.completed .task-name {
+    text-decoration: line-through;
+    color: #A5A0AE;
+}
+
+.delete-btn {
+    background: transparent;
+    color: #A09AAA;
+    padding: 5px 10px;
+}
+
+.reminder-card {
+    background: #EAE4F5;
+    line-height: 1.7;
+}
+
+.reminder-card h3 {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 700px) {
+    .app {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .sidebar-note {
+        display: none;
+    }
+
+    .main-content {
+        padding: 25px 18px;
+    }
+
+    #task-form {
+        flex-wrap: wrap;
+    }
+
+    #task-form input {
+        flex-basis: 100%;
+    }
+}
